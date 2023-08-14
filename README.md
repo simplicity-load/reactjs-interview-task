@@ -6,7 +6,7 @@ In Flex Business Solutions, we aim to provide excellence and efficiency on all o
 ### Tech Test Overview
 We have provided below the Figma link of this task. On the main page,
 
-[FIGMA] [https://www.figma.com/file/uOxY3AiUFaGuxsU9nk0H1O/ReactJs-Test?node-id=0-1]
+[FIGMA] [https://www.figma.com/file/T6hUVUDh5ihoYwQILcJDcf/React-Home-Test?type=design&node-id=0%3A1&mode=design&t=lOTjaPb3chxGqXkY-1]
 
 We love to see:
 - Functional code
