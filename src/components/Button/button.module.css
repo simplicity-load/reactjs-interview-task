@@ -1,0 +1,70 @@
+.button {
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-md);
+  min-height: calc(var(--size-md) * 2);
+  max-height: calc(var(--size-md) * 2);
+  min-width: fit-content;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: var(--green-button);
+}
+
+.button:hover {
+  background: var(--secondary-green-button);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  opacity: 0.8;
+  box-shadow: var(--box-shadow);
+}
+
+.red {
+  background: var(--red-button);
+}
+.red:hover {
+  background: var(--secondary-red-button);
+}
+
+.label {
+  padding: var(--size-sm) var(--size-lg);
+  width: 100%;
+  color: var(--secondary-foreground);
+  font-size: 0.875rem;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: calc(var(--size-sm) / 1.5);
+  color: var(--secondary-foreground);
+}
+.button:hover .icon {
+  border-left-color: var(--green-button);
+}
+
+.rightIcon {
+  border-left: 1px solid var(--secondary-green-button);
+}
+
+.redIcon {
+  border-left-color: var(--secondary-red-button);
+}
+.button:hover .redIcon {
+  border-left-color: var(--red-button);
+}

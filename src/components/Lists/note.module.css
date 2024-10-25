@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: var(--size-sm);
+  border-bottom: 1px solid var(--note-item-separator);
+  width: 100%;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.wrapper:hover {
+  box-shadow: var(--box-shadow);
+  transform: scale(1.01);
+}
+.wrapper:active {
+  opacity: 0.8;
+}
+
+.selected {
+  background: var(--note-item-hover);
+}
+
+.head {
+  font-weight: var(--font-thick);
+}
+
+.body {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

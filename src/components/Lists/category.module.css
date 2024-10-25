@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--size-sm);
+  padding: var(--size-sm);
+  width: 100%;
+
+  background: var(--category-item-background);
+  border-radius: var(--radius-md);
+  color: var(--secondary-foreground);
+}
+.wrapper:hover {
+  background: var(--category-item-hover);
+}
+.wrapper:active {
+  opacity: 0.8;
+}
+
+.selected {
+  background: var(--category-item-active);
+  color: var(--foreground);
+}
+.selected:hover {
+  background: var(--category-item-active);
+  color: var(--foreground);
+}
+
+.disabled {
+  background: var(--category-item-disabled);
+}
+.disabled:hover {
+  background: var(--category-item-disabled);
+}
+
+.folderIcon {
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+
+.label {
+  width: 100%;
+}
+
+.openIcon {
+  display: flex;
+  align-items: center;
+}
+.openIcon svg {
+  height: calc(var(--size-md) * 1.75);
+  width: calc(var(--size-md) * 1.75);
+}

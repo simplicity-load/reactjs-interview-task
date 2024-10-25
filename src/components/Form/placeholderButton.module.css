@@ -1,0 +1,14 @@
+.wrapper {
+  background: var(--category-item-background);
+  border-radius: var(--radius-md);
+  height: calc(var(--size-md) * 2);
+  width: calc(var(--size-md) * 2);
+}
+
+.big {
+  width: calc(var(--size-md) * 10);
+}
+
+.green {
+  background: var(--green-button);
+}

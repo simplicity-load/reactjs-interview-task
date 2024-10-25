@@ -1,11 +1,11 @@
-import Image from "next/image";
+"use client";
 import styles from "./page.module.css";
-import { Button } from "@/components";
+import { Main } from "@/components";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Button label="test" />
+      <Main />
     </div>
   );
 }

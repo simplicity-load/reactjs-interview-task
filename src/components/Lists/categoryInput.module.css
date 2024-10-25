@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--size-sm);
+}
+
+.input {
+  border-radius: var(--radius-md);
+  border: none;
+  outline: none;
+  font-size: 0.75rem;
+  font-weight: var(--font-regular);
+  background-color: var(--input-background);
+  padding: var(--size-sm);
+  height: calc(var(--size-md) * 2);
+  width: 100%;
+  color: inherit;
+}
+.input::placeholder {
+  color: var(--form-input-placeholder);
+  font-weight: var(--font-regular);
+}

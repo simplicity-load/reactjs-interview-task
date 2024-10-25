@@ -1,0 +1,21 @@
+.notes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
+    height: 100%;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-sm);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+}

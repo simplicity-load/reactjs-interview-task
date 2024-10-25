@@ -1,0 +1,39 @@
+.wrapper {
+  position: relative;
+  color: var(--search-foreground);
+  display: flex;
+  align-items: center;
+  color: var(--search-foreground);
+  transition: all 0.1s ease-in-out;
+}
+.wrapper:focus-within {
+  color: var(--search-foreground-focus);
+  fill: var(--search-foreground-focus);
+}
+
+.icon {
+  position: absolute;
+  left: var(--size-sm);
+  padding: (var(--size-sm) / 2);
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: var(--size-sm) var(--size-sm) var(--size-sm)
+    calc(var(--size-sm) * 4.5);
+  height: calc(var(--size-md) * 2);
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--search-foreground);
+  color: inherit;
+  border-radius: var(--radius-md);
+}
+.input:focus {
+  border: 1px solid var(--search-foreground-focus);
+}
+.input::placeholder {
+  color: var(--search-foreground);
+  opacity: 1;
+}
