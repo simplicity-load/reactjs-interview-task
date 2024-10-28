@@ -1,10 +1,11 @@
-import { Categories, Drawers, Form, NoData, Notes } from "@/components";
+import { Categories, Form, Notes } from "@/components";
 import { useNotes } from "@/context";
+import { Drawers, NoData } from "@/ui";
 import { Close } from "@mui/icons-material";
 import { useMemo } from "react";
-import styles from "./main.module.css";
+import styles from "./app.module.css";
 
-export const Main = () => {
+export const App = () => {
   const { isCreatingNote, isAnyCategorySelected, isAnyNoteSelected } =
     useNotes();
   const content: JSX.Element[] = useMemo(() => {
@@ -20,7 +21,7 @@ export const Main = () => {
     return [<Categories key="c" />, <Form key="f" />];
   }, [isAnyCategorySelected, isCreatingNote, isAnyNoteSelected]);
   return (
-    <div className={styles.content}>
+    <div aria-label="app" className={styles.content}>
       <header className={styles.header}>
         <span>Your notes</span> <Close />
       </header>

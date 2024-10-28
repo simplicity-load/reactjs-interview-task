@@ -21,6 +21,7 @@ export const Category = ({
   const isDisabled = (isCreatingNote || isEditingNote) && !isSelected;
   return (
     <div
+      aria-label="category"
       className={classNames(styles.wrapper, {
         [styles.selected]: isSelected,
         [styles.disabled]: isDisabled,

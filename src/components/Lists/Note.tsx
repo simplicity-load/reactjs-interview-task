@@ -13,6 +13,7 @@ export const Note = ({ note }: P) => {
   const isDisabled = isEditingNote && !isSelected;
   return (
     <div
+    aria-label="note"
       className={classNames(styles.wrapper, {
         [styles.selected]: isSelected,
         [styles.disabled]: isDisabled,

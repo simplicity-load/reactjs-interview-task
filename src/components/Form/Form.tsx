@@ -1,6 +1,5 @@
-import { Button } from "@/components";
 import { useNotes } from "@/context";
-import { PlaceholderButton } from "./PlaceholderButton";
+import { Button, PlaceholderButton } from "@/ui";
 import styles from "./form.module.css";
 
 export const Form = () => {
@@ -11,9 +10,9 @@ export const Form = () => {
     deleteNote,
     isCreatingNote,
   } = useNotes();
-  if (!note) return;
+  if (!note) return <div>Empty Note</div>;
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} aria-label="form">
       <div className={styles.header}>
         <div className={styles.leftHeader}>
           <PlaceholderButton isBig />
@@ -28,6 +27,7 @@ export const Form = () => {
       </div>
       <div className={styles.form}>
         <input
+          aria-label="input title"
           value={note?.head}
           className={styles.title}
           placeholder="Add a title"
@@ -37,6 +37,7 @@ export const Form = () => {
         />
         <hr className={styles.separator} />
         <textarea
+          aria-label="input body"
           value={note?.body}
           className={styles.body}
           placeholder="Write your note here..."
@@ -46,9 +47,15 @@ export const Form = () => {
         />
       </div>
       <div className={styles.footer}>
-        <Button label="Save Note" icon="save" onClick={submitNote} />
+        <Button
+          ariaLabel="save changes"
+          label="Save Note"
+          icon="save"
+          onClick={submitNote}
+        />
         {!isCreatingNote && (
           <Button
+            ariaLabel="delete note"
             label="Delete Note"
             icon="delete"
             isRed

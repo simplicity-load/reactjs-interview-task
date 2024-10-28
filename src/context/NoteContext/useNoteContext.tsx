@@ -309,3 +309,11 @@ export const NoteContextProvider = ({ children }: P) => {
     </NoteContext.Provider>
   );
 };
+
+interface MP extends P {
+  context: Context;
+}
+
+export const MockNoteProvider = ({ children, context }: MP) => (
+  <NoteContext.Provider value={context}>{children}</NoteContext.Provider>
+);

@@ -1,5 +1,5 @@
 "use client";
-import { Main } from "@/components";
+import { App } from "@/components";
 import { NoteContextProvider } from "@/context";
 import { store } from "@/store";
 import { Provider } from "react-redux";
@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.page}>
       <Provider store={store}>
         <NoteContextProvider>
-          <Main />
+          <App />
         </NoteContextProvider>
       </Provider>
     </div>

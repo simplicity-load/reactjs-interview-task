@@ -9,6 +9,7 @@ interface P {
   icon: Icon;
   isRed?: boolean;
   onClick?: () => void;
+  ariaLabel?: string;
 }
 
 const iconMap: Record<Icon, JSX.Element> = {
@@ -18,13 +19,20 @@ const iconMap: Record<Icon, JSX.Element> = {
   delete: <Delete />,
 };
 
-export const Button = ({ label, icon, isRed = false, onClick }: P) => {
+export const Button = ({
+  label,
+  icon,
+  isRed = false,
+  onClick,
+  ariaLabel,
+}: P) => {
   return (
     <button
       className={classNames(styles.button, {
         [styles.red]: isRed,
       })}
       onClick={onClick}
+      aria-label={ariaLabel}
     >
       {label && <span className={styles.label}>{label}</span>}
       <div

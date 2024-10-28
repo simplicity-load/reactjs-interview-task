@@ -1,5 +1,5 @@
 import { useNotes } from "@/context";
-import { Button } from "../Button";
+import { Button } from "@/ui";
 import styles from "./categoryInput.module.css";
 
 export const CategoryInput = () => {
@@ -9,8 +9,9 @@ export const CategoryInput = () => {
     cancelCategoryCreation,
   } = useNotes();
   return (
-    <div className={styles.wrapper}>
+    <div aria-label="input category name" className={styles.wrapper}>
       <input
+      aria-label="change category"
         className={styles.input}
         placeholder="Add a title..."
         onChange={({ target: { value } }) => changeCategoryCreation(value)}
@@ -20,8 +21,17 @@ export const CategoryInput = () => {
         }}
         autoFocus
       />
-      <Button icon="save" onClick={submitCategoryCreation} />
-      <Button icon="close" isRed onClick={cancelCategoryCreation} />
+      <Button
+        ariaLabel="save category"
+        icon="save"
+        onClick={submitCategoryCreation}
+      />
+      <Button
+        ariaLabel="cancel category"
+        icon="close"
+        isRed
+        onClick={cancelCategoryCreation}
+      />
     </div>
   );
 };
