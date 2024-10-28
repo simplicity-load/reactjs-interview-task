@@ -87,6 +87,7 @@ export const NoteContextProvider = ({ children }: P) => {
         categoryId: prev.selection.categoryId === categoryId ? 0 : categoryId,
         noteId: 0,
       },
+      noteCreation: undefined,
     }));
     cancelCategoryCreation();
   };
