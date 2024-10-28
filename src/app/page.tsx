@@ -1,11 +1,18 @@
 "use client";
-import styles from "./page.module.css";
 import { Main } from "@/components";
+import { NoteContextProvider } from "@/context";
+import { store } from "@/store";
+import { Provider } from "react-redux";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Main />
+      <Provider store={store}>
+        <NoteContextProvider>
+          <Main />
+        </NoteContextProvider>
+      </Provider>
     </div>
   );
 }

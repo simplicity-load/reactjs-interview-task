@@ -9,9 +9,11 @@
   background: var(--category-item-background);
   border-radius: var(--radius-md);
   color: var(--secondary-foreground);
+  transition: fill 0.1s ease-in-out;
 }
 .wrapper:hover {
   background: var(--category-item-hover);
+  box-shadow: var(--box-shadow);
 }
 .wrapper:active {
   opacity: 0.8;
@@ -26,11 +28,13 @@
   color: var(--foreground);
 }
 
-.disabled {
-  background: var(--category-item-disabled);
+.disabled,
+.disabled:active {
+  opacity: 0.8;
 }
 .disabled:hover {
-  background: var(--category-item-disabled);
+  background: var(--category-item-background);
+  box-shadow: none;
 }
 
 .folderIcon {

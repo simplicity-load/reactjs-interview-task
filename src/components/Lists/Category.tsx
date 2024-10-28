@@ -1,28 +1,31 @@
-import { Category } from "@/hooks";
-import styles from "./category.module.css";
-import { ArrowDropDown, ArrowRight, Folder } from "@mui/icons-material";
+import { useNotes } from "@/context";
+import { Category as TCategory } from "@/store";
 import { classNames } from "@/utils";
+import { ArrowDropDown, ArrowRight, Folder } from "@mui/icons-material";
+import styles from "./category.module.css";
 
 interface P {
-  category: Category;
-  isSelected?: boolean;
-  isDisabled?: boolean;
+  category: TCategory;
 }
 
-export const CategoryItem = ({
+export const Category = ({
   category: {
+    id,
     name,
     noteList: { length },
   },
-  isSelected = false,
-  isDisabled = false,
 }: P) => {
+  const { selectCategory, isCategorySelected, isCreatingNote, isEditingNote } =
+    useNotes();
+  const isSelected = isCategorySelected(id);
+  const isDisabled = (isCreatingNote || isEditingNote) && !isSelected;
   return (
     <div
       className={classNames(styles.wrapper, {
         [styles.selected]: isSelected,
         [styles.disabled]: isDisabled,
       })}
+      onClick={() => selectCategory(id)}
     >
       <div className={styles.folderIcon}>
         <Folder />

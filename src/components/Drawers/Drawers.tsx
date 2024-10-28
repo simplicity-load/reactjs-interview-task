@@ -15,7 +15,9 @@ export const Drawers = ({ children }: P) => {
       })}
     >
       {children.map((child) => (
-        <div className={styles.drawer}>{child}</div>
+        <div key={child.key} className={styles.drawer}>
+          {child}
+        </div>
       ))}
     </main>
   );

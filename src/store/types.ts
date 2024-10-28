@@ -1,3 +1,6 @@
+import { TypedUseSelectorHook, useSelector } from "react-redux";
+import { store } from "./store";
+
 export interface Note {
   id: number;
   head: string;
@@ -9,6 +12,10 @@ export interface Category {
   name: string;
   noteList: Note[];
 }
+
+export const useTypedSelector: TypedUseSelectorHook<
+  ReturnType<typeof store.getState>
+> = useSelector;
 
 export const categoris: Category[] = [
   {
@@ -60,4 +67,5 @@ export const categories = categoris
   .concat(categoris)
   .concat(categoris)
   .concat(categoris)
-  .concat(categoris);
+  .concat(categoris)
+  .map((c) => ({ ...c, id: Math.random() }));

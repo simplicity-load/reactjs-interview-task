@@ -9,10 +9,10 @@
 }
 
 .twoColumn {
-  grid-template-columns: 2fr 8fr;
+  grid-template-columns: 20% 80%;
 }
 .threeColumn {
-  grid-template-columns: 2fr 3fr 5fr;
+  grid-template-columns: 20% 30% calc(50% - var(--size-sm));
 }
 
 .drawer {
